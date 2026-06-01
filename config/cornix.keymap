@@ -60,7 +60,7 @@
             bindings = <&mo>, <&sl>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             hold-while-undecided;
             hold-trigger-on-release;
         };
@@ -71,7 +71,7 @@
             bindings = <&kp>, <&sk>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             hold-while-undecided;
             hold-trigger-on-release;
         };
@@ -84,6 +84,8 @@
                 <&kp_sk LEFT_ALT LEFT_ALT>,
                 <&kp_sk LEFT_WIN LEFT_WIN>,
                 <&kp_sk LA(LEFT_WIN) LA(LEFT_WIN)>;
+
+            tapping-term-ms = <250>;
         };
 
         shift_ctrl: shift_ctrl {
@@ -94,6 +96,8 @@
                 <&kp_sk RIGHT_SHIFT RIGHT_SHIFT>,
                 <&kp_sk RIGHT_CONTROL RIGHT_CONTROL>,
                 <&kp_sk RS(RIGHT_CONTROL) RS(RIGHT_CONTROL)>;
+
+            tapping-term-ms = <250>;
         };
     };
 
