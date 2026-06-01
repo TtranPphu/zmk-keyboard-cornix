@@ -111,6 +111,16 @@
             bindings = <&kp ENTER>;
             key-positions = <22 23>;
         };
+
+        cb_space_miss {
+            bindings = <&kp SPACE>;
+            key-positions = <16 17>;
+        };
+
+        cb_enter_miss {
+            bindings = <&kp ENTER>;
+            key-positions = <19 18>;
+        };
     };
 
     keymap {
