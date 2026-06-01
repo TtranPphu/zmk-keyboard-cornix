@@ -88,9 +88,9 @@
             label = "SHIFT_CTRL";
             #binding-cells = <0>;
             bindings =
-                <&kp RIGHT_SHIFT>,
-                <&kp RIGHT_CONTROL>,
-                <&kp RS(RIGHT_CONTROL)>;
+                <&kp_sk RIGHT_SHIFT RIGHT_SHIFT>,
+                <&kp_sk RIGHT_CONTROL RIGHT_CONTROL>,
+                <&kp_sk RS(RIGHT_CONTROL) RS(RIGHT_CONTROL)>;
         };
     };
 
