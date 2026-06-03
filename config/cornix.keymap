@@ -106,12 +106,13 @@
     combos {
         compatible = "zmk,combos";
 
-        cb_escape {
-            bindings = <&kp ESCAPE>;
+        cb_delete_left {
+            bindings = <&kp DELETE>;
             key-positions = <0 1>;
+            layers = <1 2>;
         };
 
-        cb_delete {
+        cb_delete_right {
             bindings = <&kp DELETE>;
             key-positions = <10 11>;
         };
@@ -121,34 +122,24 @@
             key-positions = <12 13>;
         };
 
-        cb_space {
+        cb_space_left {
             bindings = <&kp SPACE>;
             key-positions = <15 16>;
         };
 
-        cb_enter_middle {
+        cb_space_right {
             bindings = <&kp ENTER>;
             key-positions = <19 20>;
-        };
-
-        cb_enter_right {
-            bindings = <&kp ENTER>;
-            key-positions = <22 23>;
-        };
-
-        cb_space_miss {
-            bindings = <&kp SPACE>;
-            key-positions = <16 17>;
-        };
-
-        cb_enter_miss {
-            bindings = <&kp ENTER>;
-            key-positions = <19 18>;
         };
 
         cb_enter_left {
             bindings = <&kp ENTER>;
             key-positions = <28 29>;
+        };
+
+        cb_enter_right {
+            bindings = <&kp ENTER>;
+            key-positions = <33 32>;
         };
     };
 
