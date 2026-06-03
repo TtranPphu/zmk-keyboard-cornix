@@ -128,7 +128,7 @@
         };
 
         cb_space_right {
-            bindings = <&kp ENTER>;
+            bindings = <&kp SPACE>;
             key-positions = <19 20>;
         };
 
