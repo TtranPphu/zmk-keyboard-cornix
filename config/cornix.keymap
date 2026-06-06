@@ -110,7 +110,7 @@
         cb_delete_left {
             bindings = <&kp DELETE>;
             key-positions = <0 1>;
-            layers = <1 2>;
+            layers = <1 2 5 6 7 3 4>;
         };
 
         cb_delete_right {
@@ -174,32 +174,32 @@
 &kp BACKSPACE  &none  &kp F7  &kp F8  &kp F9  &kp F10                  &none           &none            &none                 &none                  &none         &trans
 &trans         &none  &kp F4  &kp F5  &kp F6  &kp F11                  &none           &none            &none                 &none                  &kp PIPE      &none
 &trans         &none  &kp F1  &kp F2  &kp F3  &kp F12  &trans  &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &trans
-&none          &none  &none   &none   &trans  &none                    &none           &trans           &none                 &none                  &none         &none
+&none          &none  &none   &none   &trans  &trans                   &trans          &trans           &none                 &none                  &none         &none
             >;
         };
 
         pinky_sallow {
             bindings = <
-&none       &none     &kp UP_ARROW  &none      &none   &none                   &none     &none     &none   &none      &none  &trans
-&trans      &kp LEFT  &kp DOWN      &kp RIGHT  &none   &none                   &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &none
-&trans      &none     &none         &none      &none   &none   &trans  &trans  &none     &none     &none   &none      &none  &trans
-&mo_sl 4 4  &none     &none         &none      &trans  &trans                  &trans    &trans    &none   &none      &none  &mo_sl 4 4
+&kp BACKSPACE  &none     &kp UP_ARROW  &none      &none   &none                   &none     &none     &none   &none      &none  &trans
+&trans         &kp LEFT  &kp DOWN      &kp RIGHT  &none   &none                   &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &kp ESCAPE
+&trans         &none     &none         &none      &none   &none   &trans  &trans  &none     &none     &none   &none      &none  &trans
+&mo_sl 4 4     &none     &none         &none      &trans  &trans                  &trans    &trans    &none   &none      &none  &mo_sl 4 4
             >;
         };
 
         pinky_deep {
             bindings = <
-&bt BT_CLR_ALL  &none         &kp PAGE_UP    &none         &none         &none                         &none         &none          &none         &none         &none         &bt BT_CLR_ALL
-&trans          &kp HOME      &kp PAGE_DOWN  &kp END       &none         &none                         &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END       &none         &none
-&trans          &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-&none           &none         &none          &none         &trans        &none                         &none         &trans         &none         &none         &none         &none
+&kp BACKSPACE  &none         &kp PAGE_UP    &none         &none         &none                         &none         &none          &none         &none         &none         &trans
+&trans         &kp HOME      &kp PAGE_DOWN  &kp END       &none         &none                         &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END       &none         &kp ESCAPE
+&trans         &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+&none          &none         &none          &none         &trans        &trans                        &trans        &trans         &none         &none         &none         &none
             >;
         };
 
         thumb_shallow_draft {
             bindings = <
 &kp BACKSPACE  &kp N1            &kp N2             &kp N3         &kp N4     &kp N5                   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp N7      &kp N8  &kp N9   &trans
-&trans         &kp N6            &kp N7             &kp N8         &kp N9     &kp N0                   &kp KP_MULTIPLY       &kp KP_DIVIDE          &kp N4      &kp N5  &kp N6   &none
+&trans         &kp N6            &kp N7             &kp N8         &kp N9     &kp N0                   &kp KP_MULTIPLY       &kp KP_DIVIDE          &kp N4      &kp N5  &kp N6   &kp ESCAPE
 &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp MINUS  &kp EQUAL  &none  &none  &kp KP_PLUS           &kp KP_MINUS           &kp N1      &kp N2  &kp N3   &trans
 &none          &none             &none              &mo_sl 6 6     &trans     &trans                   &trans                &trans                 &mo_sl 6 6  &kp N0  &kp DOT  &none
             >;
@@ -207,19 +207,19 @@
 
         thumb_deep_draft {
             bindings = <
-&kp BACKSPACE  &kp F1  &kp F2  &kp F3      &kp F4   &kp F5                 &none   &none   &none       &none  &none  &trans
-&trans         &kp F6  &kp F7  &kp F8      &kp F9   &kp F10                &none   &none   &none       &none  &none  &none
-&trans         &none   &none   &none       &kp F11  &kp F12  &none  &none  &none   &none   &none       &none  &none  &trans
-&none          &none   &none   &mo_sl 7 7  &trans   &trans                 &trans  &trans  &mo_sl 7 7  &none  &none  &none
+&kp BACKSPACE  &kp F1  &kp F2  &kp F3      &kp F4   &kp F5                 &kp F1  &kp F2  &kp F3      &kp F4   &kp F5   &trans
+&trans         &kp F6  &kp F7  &kp F8      &kp F9   &kp F10                &kp F6  &kp F7  &kp F8      &kp F9   &kp F10  &kp ESCAPE
+&trans         &none   &none   &none       &kp F11  &kp F12  &none  &none  &none   &none   &none       &kp F11  &kp F12  &trans
+&none          &none   &none   &mo_sl 7 7  &trans   &trans                 &trans  &trans  &mo_sl 7 7  &none    &none    &none
             >;
         };
 
         thumb_abyss_draft {
             bindings = <
-&bt BT_CLR      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                 &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR_ALL
-&bt BT_CLR_ALL  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &bt BT_CLR_ALL
-&none           &none          &none          &none          &none          &none          &none  &none  &none          &none          &none          &none          &none          &none
-&none           &none          &none          &none          &none          &none                        &none          &none          &none          &none          &none          &none
+&none       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                                   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
+&none       &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                                  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
+&none       &none          &none          &bt BT_CLR     &none          &none          &bt BT_CLR_ALL  &bt BT_CLR_ALL  &none          &none          &bt BT_CLR     &none          &none          &none
+&sys_reset  &none          &none          &none          &none          &none                                          &none          &none          &none          &none          &none          &sys_reset
             >;
         };
     };
