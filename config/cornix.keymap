@@ -216,10 +216,10 @@
 
         thumb_abyss_draft {
             bindings = <
-&none       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                                   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
-&none       &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                                  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
-&none       &none          &none          &bt BT_CLR     &none          &none          &bt BT_CLR_ALL  &bt BT_CLR_ALL  &none          &none          &bt BT_CLR     &none          &none          &none
-&sys_reset  &none          &none          &none          &none          &none                                          &none          &none          &none          &none          &none          &sys_reset
+&none  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                                   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
+&none  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                                  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
+&none  &none          &none          &bt BT_CLR     &none          &none          &bt BT_CLR_ALL  &bt BT_CLR_ALL  &none          &none          &bt BT_CLR     &none          &none          &none
+&none  &none          &none          &none          &none          &none                                          &none          &none          &none          &none          &none          &none
             >;
         };
     };
