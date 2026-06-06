@@ -195,5 +195,32 @@
 &none           &none         &none          &none         &trans        &none                         &none         &trans         &none         &none         &none         &none
             >;
         };
+
+        thumb_shallow_draft {
+            bindings = <
+&kp BACKSPACE  &kp N1            &kp N2             &kp N3         &kp N4     &kp N5                   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp N7      &kp N8  &kp N9   &trans
+&trans         &kp N6            &kp N7             &kp N8         &kp N9     &kp N0                   &kp KP_MULTIPLY       &kp KP_DIVIDE          &kp N4      &kp N5  &kp N6   &none
+&trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp MINUS  &kp EQUAL  &none  &none  &kp KP_PLUS           &kp KP_MINUS           &kp N1      &kp N2  &kp N3   &trans
+&none          &none             &none              &mo_sl 6 6     &trans     &trans                   &trans                &trans                 &mo_sl 6 6  &kp N0  &kp DOT  &none
+            >;
+        };
+
+        thumb_deep_draft {
+            bindings = <
+&kp BACKSPACE  &kp F1  &kp F2  &kp F3      &kp F4   &kp F5                 &none   &none   &none       &none  &none  &trans
+&trans         &kp F6  &kp F7  &kp F8      &kp F9   &kp F10                &none   &none   &none       &none  &none  &none
+&trans         &none   &none   &none       &kp F11  &kp F12  &none  &none  &none   &none   &none       &none  &none  &trans
+&none          &none   &none   &mo_sl 7 7  &trans   &trans                 &trans  &trans  &mo_sl 7 7  &none  &none  &none
+            >;
+        };
+
+        thumb_abyss_draft {
+            bindings = <
+&bt BT_CLR      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                 &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR_ALL
+&bt BT_CLR_ALL  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &bt BT_CLR_ALL
+&none           &none          &none          &none          &none          &none          &none  &none  &none          &none          &none          &none          &none          &none
+&none           &none          &none          &none          &none          &none                        &none          &none          &none          &none          &none          &none
+            >;
+        };
     };
 };
