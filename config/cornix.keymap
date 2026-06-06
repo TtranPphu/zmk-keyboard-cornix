@@ -152,7 +152,7 @@
 &kp GRAVE    &kp Q     &kp W      &kp E       &kp R     &kp T                         &kp Y      &kp U     &kp I       &kp O     &kp P     &kp BSPC
 &kp ESCAPE   &kp A     &kp S      &kp D       &kp F     &kp G                         &kp H      &kp J     &kp K       &kp L     &kp SEMI  &kp SQT
 &shift_ctrl  &kp Z     &kp X      &kp C       &kp V     &kp B      &kp K_MUTE  &none  &kp N      &kp M     &kp COMMA   &kp DOT   &kp FSLH  &shift_ctrl
-&mo_sl 3 3   &kp LEFT  &kp RIGHT  &mo_sl 1 1  &alt_win  &kp SPACE                     &kp SPACE  &alt_win  &mo_sl 1 1  &kp DOWN  &kp UP    &mo_sl 3 3
+&mo_sl 3 3   &kp LEFT  &kp RIGHT  &mo_sl 5 5  &alt_win  &kp SPACE                     &kp SPACE  &alt_win  &mo_sl 5 5  &kp DOWN  &kp UP    &mo_sl 3 3
             >;
 
             sensor-bindings =
