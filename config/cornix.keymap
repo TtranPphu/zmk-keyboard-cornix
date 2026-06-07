@@ -76,26 +76,38 @@
             hold-trigger-on-release;
         };
 
-        alt_win: alt_win {
+        alt_win_: alt_win_ {
             compatible = "zmk,behavior-tap-dance";
-            label = "ALT_WIN";
+            label = "ALT_WIN_";
             #binding-cells = <0>;
-            bindings =
-                <&kp_sk LEFT_ALT LEFT_ALT>,
-                <&kp_sk LEFT_WIN LEFT_WIN>,
-                <&kp_sk LA(LEFT_WIN) LA(LEFT_WIN)>;
+            bindings = <&kp LEFT_ALT>, <&kp LEFT_WIN>, <&kp LA(LEFT_WIN)>;
 
             tapping-term-ms = <300>;
         };
 
-        shift_ctrl: shift_ctrl {
+        shift_ctrl_: shift_ctrl_ {
             compatible = "zmk,behavior-tap-dance";
-            label = "SHIFT_CTRL";
+            label = "SHIFT_CTRL_";
             #binding-cells = <0>;
-            bindings =
-                <&kp_sk RIGHT_SHIFT RIGHT_SHIFT>,
-                <&kp_sk RIGHT_CONTROL RIGHT_CONTROL>,
-                <&kp_sk RS(RIGHT_CONTROL) RS(RIGHT_CONTROL)>;
+            bindings = <&kp LEFT_SHIFT>, <&kp LCTRL>, <&kp LS(LCTRL)>;
+
+            tapping-term-ms = <300>;
+        };
+
+        win_shift: win_shift {
+            compatible = "zmk,behavior-tap-dance";
+            label = "WIN_SHIFT";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN>, <&kp LS(LEFT_WIN)>;
+
+            tapping-term-ms = <300>;
+        };
+
+        ctrl_shift: ctrl_shift {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_SHIFT";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&kp LS(LCTRL)>;
 
             tapping-term-ms = <300>;
         };
@@ -148,10 +160,10 @@
 
         default {
             bindings = <
-&kp GRAVE    &kp Q     &kp W      &kp E       &kp R     &kp T                         &kp Y      &kp U     &kp I       &kp O     &kp P     &kp BSPC
-&kp ESCAPE   &kp A     &kp S      &kp D       &kp F     &kp G                         &kp H      &kp J     &kp K       &kp L     &kp SEMI  &kp SQT
-&shift_ctrl  &kp Z     &kp X      &kp C       &kp V     &kp B      &kp K_MUTE  &none  &kp N      &kp M     &kp COMMA   &kp DOT   &kp FSLH  &shift_ctrl
-&mo_sl 4 4   &kp LEFT  &kp RIGHT  &mo_sl 1 1  &alt_win  &kp SPACE                     &kp SPACE  &alt_win  &mo_sl 1 1  &kp DOWN  &kp UP    &mo_sl 4 4
+&kp GRAVE     &kp Q        &kp W       &kp E       &kp R      &kp T                         &kp Y      &kp U      &kp I       &kp O       &kp P        &kp BSPC
+&kp ESCAPE    &kp A        &kp S       &kp D       &kp F      &kp G                         &kp H      &kp J      &kp K       &kp L       &kp SEMI     &kp SQT
+&shift_ctrl_  &kp Z        &kp X       &kp C       &kp V      &kp B      &kp K_MUTE  &none  &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH     &shift_ctrl_
+&mo_sl 4 4    &ctrl_shift  &win_shift  &mo_sl 1 1  &alt_win_  &kp SPACE                     &kp SPACE  &alt_win_  &mo_sl 1 1  &win_shift  &ctrl_shift  &mo_sl 4 4
             >;
 
             sensor-bindings =
@@ -164,7 +176,7 @@
 &kp BACKSPACE  &kp N1            &kp N2             &kp N3         &kp N4     &kp N5                   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp N7      &kp N8  &kp N9   &trans
 &trans         &kp N6            &kp N7             &kp N8         &kp N9     &kp N0                   &kp KP_MULTIPLY       &kp KP_DIVIDE          &kp N4      &kp N5  &kp N6   &kp ESCAPE
 &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp MINUS  &kp EQUAL  &none  &none  &kp KP_PLUS           &kp KP_MINUS           &kp N1      &kp N2  &kp N3   &trans
-&none          &none             &none              &mo_sl 2 2     &trans     &trans                   &trans                &trans                 &mo_sl 2 2  &kp N0  &kp DOT  &none
+&none          &trans            &trans             &mo_sl 2 2     &trans     &trans                   &trans                &trans                 &mo_sl 2 2  &kp N0  &kp DOT  &none
             >;
         };
 
@@ -173,7 +185,7 @@
 &kp BACKSPACE  &kp F1  &kp F2  &kp F3      &kp F4   &kp F5                 &kp F1  &kp F2  &kp F3      &kp F4   &kp F5   &trans
 &trans         &kp F6  &kp F7  &kp F8      &kp F9   &kp F10                &kp F6  &kp F7  &kp F8      &kp F9   &kp F10  &kp ESCAPE
 &trans         &none   &none   &none       &kp F11  &kp F12  &none  &none  &none   &none   &none       &kp F11  &kp F12  &trans
-&none          &none   &none   &mo_sl 3 3  &trans   &trans                 &trans  &trans  &mo_sl 3 3  &none    &none    &none
+&none          &trans  &trans  &mo_sl 3 3  &trans   &trans                 &trans  &trans  &mo_sl 3 3  &none    &none    &none
             >;
         };
 
@@ -188,10 +200,10 @@
 
         pinky_sallow {
             bindings = <
-&kp BACKSPACE  &none     &kp UP_ARROW  &none      &none   &none                   &none     &none     &none   &none      &none  &trans
-&trans         &kp LEFT  &kp DOWN      &kp RIGHT  &none   &none                   &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &kp ESCAPE
-&trans         &none     &none         &none      &none   &none   &trans  &trans  &none     &none     &none   &none      &none  &trans
-&mo_sl 5 5     &none     &none         &none      &trans  &trans                  &trans    &trans    &none   &none      &none  &mo_sl 5 5
+&kp BACKSPACE  &none     &kp UP_ARROW  &none      &none   &none                   &none     &none     &none   &none      &none   &trans
+&trans         &kp LEFT  &kp DOWN      &kp RIGHT  &none   &none                   &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none   &kp ESCAPE
+&trans         &none     &none         &none      &none   &none   &trans  &trans  &none     &none     &none   &none      &none   &trans
+&mo_sl 5 5     &trans    &trans        &none      &trans  &trans                  &trans    &trans    &none   &trans     &trans  &mo_sl 5 5
             >;
         };
 
@@ -200,7 +212,7 @@
 &kp BACKSPACE  &none         &kp PAGE_UP    &none         &none         &none                         &none         &none          &none         &none         &none         &trans
 &trans         &kp HOME      &kp PAGE_DOWN  &kp END       &none         &none                         &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END       &none         &kp ESCAPE
 &trans         &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-&none          &none         &none          &none         &trans        &trans                        &trans        &trans         &none         &none         &none         &none
+&none          &trans        &trans         &none         &trans        &trans                        &trans        &trans         &none         &trans        &trans        &none
             >;
         };
     };
