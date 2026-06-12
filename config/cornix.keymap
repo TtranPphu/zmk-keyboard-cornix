@@ -136,22 +136,22 @@
 
         cb_space_left {
             bindings = <&kp SPACE>;
-            key-positions = <15 16>;
+            key-positions = <15 16 14>;
         };
 
         cb_space_right {
             bindings = <&kp SPACE>;
-            key-positions = <19 20>;
+            key-positions = <19 20 21>;
         };
 
         cb_enter_left {
             bindings = <&kp ENTER>;
-            key-positions = <28 29>;
+            key-positions = <28 29 27>;
         };
 
         cb_enter_right {
             bindings = <&kp ENTER>;
-            key-positions = <33 32>;
+            key-positions = <33 32 34>;
         };
     };
 
