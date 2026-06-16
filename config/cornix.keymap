@@ -65,10 +65,10 @@
             hold-trigger-on-release;
         };
 
-        kp_sk: kp_sk {
+        kp_kp: kp_kp {
             compatible = "zmk,behavior-hold-tap";
-            label = "KP_SK";
-            bindings = <&kp>, <&sk>;
+            label = "KP_KP";
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
@@ -108,6 +108,24 @@
             label = "CTRL_SHIFT";
             #binding-cells = <0>;
             bindings = <&kp LCTRL>, <&kp LS(LCTRL)>;
+
+            tapping-term-ms = <300>;
+        };
+
+        esc_ctrl_shift: esc_ctrl_shift {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ESC_CTRL_SHIFT";
+            #binding-cells = <0>;
+            bindings = <&kp_kp LCTRL ESCAPE>, <&kp LS(LCTRL)>;
+
+            tapping-term-ms = <300>;
+        };
+
+        apostrophe_ctrl_shift: apostrophe_ctrl_shift {
+            compatible = "zmk,behavior-tap-dance";
+            label = "APOSTROPHE_CTRL_SHIFT";
+            #binding-cells = <0>;
+            bindings = <&kp_kp LCTRL APOSTROPHE>, <&kp LS(LCTRL)>;
 
             tapping-term-ms = <300>;
         };
@@ -160,10 +178,10 @@
 
         default {
             bindings = <
-&kp GRAVE     &kp Q        &kp W       &kp E       &kp R      &kp T                         &kp Y      &kp U      &kp I       &kp O       &kp P        &kp BSPC
-&kp ESCAPE    &kp A        &kp S       &kp D       &kp F      &kp G                         &kp H      &kp J      &kp K       &kp L       &kp SEMI     &kp SQT
-&shift_ctrl_  &kp Z        &kp X       &kp C       &kp V      &kp B      &kp K_MUTE  &none  &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH     &shift_ctrl_
-&mo_sl 4 4    &ctrl_shift  &win_shift  &mo_sl 1 1  &alt_win_  &kp SPACE                     &kp SPACE  &alt_win_  &mo_sl 1 1  &win_shift  &ctrl_shift  &mo_sl 4 4
+&kp GRAVE        &kp Q  &kp W  &kp E       &kp R      &kp T                         &kp Y      &kp U      &kp I       &kp O    &kp P     &kp BSPC
+&esc_ctrl_shift  &kp A  &kp S  &kp D       &kp F      &kp G                         &kp H      &kp J      &kp K       &kp L    &kp SEMI  &apostrophe_ctrl_shift
+&shift_ctrl_     &kp Z  &kp X  &kp C       &kp V      &kp B      &kp K_MUTE  &none  &kp N      &kp M      &kp COMMA   &kp DOT  &kp FSLH  &shift_ctrl_
+&mo_sl 4 4       &none  &none  &mo_sl 1 1  &alt_win_  &kp SPACE                     &kp SPACE  &alt_win_  &mo_sl 1 1  &none    &none     &mo_sl 4 4
             >;
 
             sensor-bindings =
@@ -209,10 +227,10 @@
 
         pinky_deep {
             bindings = <
-&kp BACKSPACE  &none         &kp PAGE_UP    &none         &none         &none                         &none         &none          &none         &none         &none         &trans
-&trans         &kp HOME      &kp PAGE_DOWN  &kp END       &none         &none                         &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END       &none         &kp ESCAPE
-&trans         &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-&none          &trans        &trans         &none         &trans        &trans                        &trans        &trans         &none         &trans        &trans        &none
+&kp BACKSPACE  &none     &kp PAGE_UP    &none    &none   &none                   &none     &none          &none        &none    &none   &trans
+&trans         &kp HOME  &kp PAGE_DOWN  &kp END  &none   &none                   &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END  &none   &kp ESCAPE
+&trans         &none     &none          &none    &none   &none   &trans  &trans  &none     &none          &none        &none    &none   &trans
+&none          &trans    &trans         &none    &trans  &trans                  &trans    &trans         &none        &trans   &trans  &none
             >;
         };
     };
