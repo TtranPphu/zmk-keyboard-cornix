@@ -117,7 +117,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ESC_CTRL_SHIFT";
             #binding-cells = <0>;
-            bindings = <&kp_kp LCTRL ESCAPE>, <&kp LS(LCTRL)>;
+            bindings = <&kp_kp LCTRL ESCAPE>, <&kp_kp LS(LCTRL) ESCAPE>;
 
             tapping-term-ms = <300>;
         };
@@ -126,7 +126,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "APOSTROPHE_CTRL_SHIFT";
             #binding-cells = <0>;
-            bindings = <&kp_kp LCTRL APOSTROPHE>, <&kp LS(LCTRL)>;
+            bindings =
+                <&kp_kp LCTRL APOSTROPHE>,
+                <&kp_kp LS(LCTRL) LC(APOSTROPHE)>;
 
             tapping-term-ms = <300>;
         };
