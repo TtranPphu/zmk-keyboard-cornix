@@ -74,6 +74,7 @@
             tapping-term-ms = <300>;
             hold-while-undecided;
             hold-trigger-on-release;
+            flavor = "tap-preferred";
         };
 
         alt_win_: alt_win_ {
