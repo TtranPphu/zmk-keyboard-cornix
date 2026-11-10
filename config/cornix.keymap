@@ -83,7 +83,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_ALT>, <&kp LEFT_WIN>, <&kp LA(LEFT_WIN)>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
         };
 
         shift_ctrl_: shift_ctrl_ {
@@ -92,7 +92,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp LCTRL>, <&kp LS(LCTRL)>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
         };
 
         win_shift: win_shift {
@@ -101,7 +101,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_WIN>, <&kp LS(LEFT_WIN)>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
         };
 
         ctrl_shift: ctrl_shift {
@@ -110,7 +110,7 @@
             #binding-cells = <0>;
             bindings = <&kp LCTRL>, <&kp LS(LCTRL)>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
         };
     };
 
